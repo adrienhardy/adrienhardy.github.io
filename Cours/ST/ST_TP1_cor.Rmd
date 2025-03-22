@@ -1,0 +1,228 @@
+---
+title: "TP1 Series Temporelles : Correction"
+author: "Adrien Hardy"
+date: ""
+output: html_document
+---
+## Exercice 1
+
+```{r}
+n <- 500
+t <- seq(1,n,1) # ou t <- 1:n
+eps <- rnorm(n,0,1)
+```
+
+### Questions (a) et (b)
+
+
+```{r}
+# 1.
+y1 <- eps 
+plot(y1,type='l',ylim=c(-6,6), xlab="Temps t",ylab="Xt")
+lines(t*0, col='blue', lwd=2)
+```
+
+La période, tendance et saisonnalité sont données par :
+$$
+T=1,\qquad m_t=s_t=0.
+$$
+
+```{r}
+# 2.
+y2 <- 2*sin(0.1*t/pi)+eps
+plot(y2,type='l',ylim=c(-6,6), xlab="Temps t",ylab="Xt")
+lines(2*sin(0.1*t/pi),col='blue',lwd=2)
+```
+
+On aimerait dire que $T=20$, $m_t= 0$ et $s_t=2\sin(\frac{\pi t}{10})$, mais comme en toute rigueur la saisonnalité doit satisfaire la condition :
+$$
+\sum_{k=1}^T s_k= 0
+$$
+par convention (pour garantir l'unicité de la décomposition additive), au final on a : 
+$$
+T=20,\qquad  m_t=c,\qquad s_t=2\sin(\frac{\pi t}{10})-c,\qquad\mbox{où} \qquad c:=\sum_{k=1}^{20}2\sin(\frac{\pi t}{10})
+$$
+
+````{r}
+# 3.
+y3 <- sqrt(t/10)-4+2*sin(0.1*t/pi)+eps
+plot(y3,type='l',ylim=c(-6,6), xlab="Temps t",ylab="Xt")
+lines(sqrt(t/10)-4+2*sin(0.1*t/pi), type='l', col='blue', lwd=2)
+```
+
+La période, tendance et saisonnalité sont données par :
+$$
+T=20,\qquad m_t= \sqrt{\frac{t}{10}}-4+c,\qquad s_t=2\sin(\frac{\pi t}{10})-c,\qquad \mbox{où} \qquad c:=\sum_{k=1}^{20}2\sin(\frac{\pi t}{10}).
+$$
+
+````{r}
+
+# 4.
+y4 <- t*sin(0.1*t/pi)*eps/200
+plot(y4,type='l',ylim=c(-6,6), xlab="Temps t",ylab="Xt")
+lines(t*sin(0.1*t/pi)/200, type='l', col='blue', lwd=2)
+```
+
+La période, tendance et saisonnalité sont données par :
+$$
+T=20,\qquad m_t= ct,\qquad s_t=2\sin(\frac{\pi t}{10})/c, \qquad \mbox{où}\qquad c:=\prod_{k=1}^{20}2\sin(\frac{\pi t}{10}).
+$$
+puisque, pour garantir l'unicité de la décomposition multiplicative, il faut que la saisonnalité satisfasse la condition :
+$$
+\prod_{k=1}^T s_k= 1.
+$$
+
+**Différence visuelle entre modèle additif et multiplicatif ?**
+On voit que, dans le cas multiplicatif, l'amplitude du bruit autour de la partie déterministe varie avec le temps, ce qui n'est pas le cas dans la décomposition additive.
+
+
+
+### Question (c) [Partie théorique - Non demandée dans le compte-rendu]
+
+
+
+Si l'équation $X_t=\frac12 X_{t-1}+\epsilon_t$, $t\in\mathbb{Z}$,  a une solution $(X_t)_{t\in\mathbb Z}$, alors on voit par induction que 
+$$
+X_t=\sum_{k=0}^\infty \frac 1{2^k}\epsilon_{t-k}.\qquad\qquad (*)
+$$
+Comme $(\epsilon_t)_{t\in\mathbb Z}$ est une suite de variables centrées réduites, on a par l'inégalité de Cauchy-Schwarz $$\mathbb E|\epsilon_{i}||\epsilon_{j}|\leq (\mathbb E[\epsilon_{i}^2]\mathbb E[\epsilon_{j}^2])^{1/2}\leq 1$$ pour tout $i,j\in\mathbb Z$ et par conséquent
+$$
+\mathbb E\left[\left(\sum_{k=0}^\infty \frac 1{2^k}|\epsilon_{t-k}|\right)^2\right]
+=\sum_{k,l=0}^\infty\frac 1{2^{k+l}}\mathbb E[|\epsilon_{t-k}||\epsilon_{t-l}|]
+\leq \sum_{k,l=0}^\infty\frac 1{2^{k+l}}
+=\left(\sum_{k=0}^\infty\frac 1{2^{k}}\right)^2
+=\left(\frac 1{1-\frac 12}\right)^2
+=4<\infty,
+$$
+où l'on a utilisé le théorème de Fubini-Tonelli et la convergence d'une série géométrique. Ainsi, la série définie en (*) existe bien dans $L^2$. En particulier, l'inégalité de Cauchy-Swcharz montre que $X_t$ a une espérance finie pour tout $t\in\mathbb Z$. De plus, comme $\mathbb E[\epsilon_t]=0$ pour tout $t\in\mathbb Z$, on voit que $\mathbb E[X_t]=0$ pour tout $t\in\mathbb Z$ car 
+$$
+\mathbb E[X_t]=\frac 12 \mathbb E[X_{t-1}]=\cdots=\frac 1{2^k} \mathbb E[X_{t-k}]\xrightarrow[k\to\infty]{} 0.
+$$
+En utilisant que $\mathbb E[\epsilon_i\epsilon_j]=\delta_{ij}$, on calcule, pour tout $h\in\mathbb Z$ (faire le calcul quand $h\geq 0$ et $h<0$ séparément) :
+$$
+Cov(X_t,X_{t+h})
+=\mathbb E(X_tX_{t+h})
+=\sum_{k,l=0}^\infty\frac 1{2^{k+l}}\mathbb E[\epsilon_{t-k}\epsilon_{t+h-l}]
+=\frac 1{2^{|h|}}\sum_{k=0}^\infty\frac 1{2^{2k}}=\frac 1{2^{|h|}}\times \frac43,
+$$
+et on obtient donc pour la fonction d'autocorrélation :
+$$
+\rho(h)=\frac{Cov(X_t,X_{t+h})}{Var(X_t)}=\frac1{2^{|h|}},\qquad h\in\mathbb Z.
+$$
+
+**Conclusion :** Le processus $(X_t)_{t\in\mathbb Z}$ existe dans $L^2$ et c'est un processus stationnaire.
+
+**Simulation :** Par définition de $\tilde{X}_t$, on a pour tout $t\geq 1$,
+$|X_t-\tilde{X}_t|=\frac12|X_{t-1}-\tilde{X}_{t-1}|=\cdots=\frac1{2^t}|X_0-\tilde{X}_0|=\frac1{2^t}|X_0|$. Comme ici $\mathbb E(X_0^2)=1<\infty$, on a $\mathbb P(|X_0|<\infty)=1$ et donc
+$$
+\sup_{k\geq t}|X_k-\tilde{X}_k|=\sup_{k\geq t}\frac1{2^k}|X_0|=\frac1{2^t}|X_0|\xrightarrow[t\to\infty]{p.s.}0.
+$$
+
+Ainsi, pour approcher $n$ valeurs consécutives du processus $(X_t)_{t\in\mathbb Z}$, on peut simuler $(\tilde{X}_t)_{t\in\{1,\ldots,2n\}}$ et ne conserver que $(\tilde{X}_t)_{t\in\{n+1,\ldots,2n\}}$. On pourrait même quantifier l'erreur de notre approximation à l'aide de l'inégalité de Tchebychev : Pour tout $\epsilon>0$, 
+$$
+\mathbb P\left(\sup_{t\geq n}|X_t-\tilde{X}_t|\geq \epsilon\right)
+=\mathbb P\left(\frac1{2^n}|X_0|\geq \epsilon\right)
+=\mathbb P\left(|X_0|\geq 2^n\epsilon\right)
+\leq \frac{Var(X_0)}{4^n\epsilon^2}=\frac{1}{4^n\epsilon^2}.
+$$
+En particuler, si on s'autorise une erreur numérique $\epsilon=10^{-8}$, on voit que la probabilité que notre approximation dépasse ce seuil d'erreur est inférieure à $10^{-9}$ dès que $n\geq 50$ !
+
+
+
+### Question (c) [Partie simulation]
+
+On crée une fonction :
+
+```{r}
+Process <- function(n){
+  Z <- rnorm(2*n,0,1)
+  X <- vector(,2*n) 
+  X[1] <- Z[1]
+  for (t in 2:(2*n)){X[t] <- X[t-1]/2+ Z[t]}
+  return(X[(n+1):(2*n)])
+}
+```
+
+# Graphe du processus :
+```{r}
+Xt <- Process(500)
+plot(Xt,type='l')
+```
+
+
+
+```{r}
+# Fonction d'autocorrélation empirique :
+acf(Xt)
+```
+
+
+
+
+
+
+## Exercice 2
+
+### Question (a)
+
+```{r}
+str(EuStockMarkets)
+CAC <- EuStockMarkets[,3]
+plot(CAC)
+```
+
+On choisit de modéliser la série temporelle avec une décomposition additive :
+
+```{r}
+Dec <- decompose(CAC,type="additive")
+plot(Dec)
+```
+
+### Question (b)
+
+
+```{r}
+names(Dec)
+mt <- Dec$trend
+plot(CAC)
+lines(mt, col='blue')
+```
+
+
+### Question (c)
+```{r}
+st <- Dec$seasonal
+```
+
+On trouve que la période $T=260$ en fouillant dans les détails de la commande $decompose$ : On y lit "Frequency = 260". On peut aussi faire une petite boucle pour déterminer la période :
+```{r}
+for (i in 1:1000){if (st[i]==st[1]) print(i)}
+
+
+sum(st[1:260]) # 10^{-13} c'est essentiellement zéro...
+plot(diff(st,lag=260))
+```
+La dernière commande représente la série $\Delta_{260}s_t=s_{t}-s_{t-260}$.
+
+### Question (d)
+
+```{r}
+bruit <- Dec$random
+
+help(mean)
+mean(bruit,na.rm=TRUE)
+var(bruit,na.rm=TRUE)
+hist(bruit)
+```
+
+
+### Question (e)
+
+```{r}
+help(acf)
+acf(bruit, lag.max=200, na.action=na.pass)
+Box.test(bruit, lag=100, type="Ljung-Box")
+```
+?Box.test
+Le test de Ljung-Box (qui est jugé plus rapidement convergent que le test de Box-Pierce utilisé par défaut dans Box.test si on ne précise pas "type") nous renvoie une p-value très petite devant $\alpha=0.05$ : on rejète l'hypothèse $H_0$ d'un bruit blanc i.i.d. 
+
