@@ -24,11 +24,8 @@
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom fonts for this template -->
-    <meta name="theme-color" content="#1772CD">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
     <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
@@ -45,7 +42,7 @@
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
         <span class="d-block d-lg-none">Adrien Hardy</span>
         <span class="d-none d-lg-block">
-          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/moi2.jpg" alt="Portrait photo of Adrien Hardy" decoding="async">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/moi2.jpg" alt="">
 
           <!-- <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/moi.png" alt=""> -->
         </span>
@@ -84,12 +81,12 @@
 <!-- SECTION: About -->
 
 
-<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="About">
+<section class="resume-section p-3 p-lg-5 d-flex d-column" id="About">
 <div class="my-auto">
   <h1 class="mb-0">Adrien
     <span class="text-primary">Hardy</span>
   </h1>
-  <div class="subheading mb-5">Mathematician | Quantitative Researcher at <A href="https://www.qube-rt.com">QRT</A>   |  Maître de conférences at <A href="https://www.univ-lille.fr/">Université de Lille</A>. 
+  <div class="subheading mb-5">Mathematician | Quantitative Researcher at <A href="https://www.qube-rt.com">QRT</A>   |  Maître de conférences at <A href=https://www.univ-lille.fr/>Université de Lille</A>. 
   <!--   <a href="mailto:name@email.com">name@email.com</a> -->
   </div>
   <p class="mb-5">
@@ -111,7 +108,7 @@ Here I share my research publications, some teaching resources, and a few though
 <STRONG><font color="mediumblue">About me:</font></STRONG> 
 I'm quantitative research director at <A href="https://www.qube-rt.com">Qube Research and Technologies</A>, an algorithmic trading investement fund, in Zürich. 
 I am on leave from my academic position (Maître de conférences, i.e., Associate professor) 
-from the department of Mathematics at <A href="https://www.univ-lille.fr/">Université de Lille</A>. 
+from the department of Mathematics at <A href=https://www.univ-lille.fr/>Université de Lille</A>. 
 <BR/><BR/>
 
 My academic research interests lie principally in understanding large random interacting particle systems, including random matrix models, determinantal point processes, 
@@ -119,17 +116,34 @@ or Gibbs measures such as the Coulomb gas. More recently, I became interested in
 telecomunications, and quantitative finance). 
 <BR/><BR/>
 
+
 <!-- Picture -->
-<div class="text-center my-4">
+ <center>
+  <style>
+    .image-container {
+      text-align: center;
+      position: relative;
+      display: inline-block;
+    }
+    .image-caption {
+      font-size: 0.8em;
+      color: #888;
+      margin-top: 30px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .image-container:hover .image-caption {
+      opacity: 1;
+    }
+  </style>
   <div class="image-container">
-    <img src="Spherical.jpg" alt="Spherical GAF realization (picture)" class="spherical-img" loading="lazy" decoding="async">
-    <div class="image-caption">Zeros of a spherical Gaussian analytic function, taken from <a href="#ref-spherical" class="image-caption-link">Bardenet-Hardy 2019</a>.</div>
+    <img src="Spherical.jpg" alt="Spherical GAF realization (picture)" style="width:300px;height:300px;">
+    <div class="image-caption">Zeros of a spherical Gaussian analytic function, taken from <a href="#ref-spherical" style="color: #888; text-decoration: none;">Bardenet-Hardy 2019</a>. </div>
   </div>
-</div>
+</center>
            </p>
 <!-- End picture -->
 
-</div>
 </section>
 
 
@@ -242,9 +256,7 @@ theory and applications, SampTA</I> (2019)  [<A HREF="https://hal.archives-ouver
 		 <A HREF="http://link.springer.com/article/10.1007/s00205-018-1316-3">ARMA</A>]
 		 <BR>
 		 <BR>
-      <div class="embed-responsive embed-responsive-16by9 my-3">
-        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/FZluLPhNDQg" title="Energy of the Coulomb gas on the sphere at low temperature (YouTube)" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
+		  <iframe width="418" height="214" src="https://www.youtube.com/embed/FZluLPhNDQg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</P>
 
 
@@ -376,34 +388,6 @@ theory and applications, SampTA</I> (2019)  [<A HREF="https://hal.archives-ouver
 </OL>
 
 
-<ul>
-
-	  <li><P><STRONG><font color="mediumblue"> A correspondence between zeros of time-frequency transforms and Gaussian analytic functions</font></STRONG> 
-    <BR>
-    with <A HREF="https://rbardenet.github.io/"><SPAN STYLE="text-decoration: none">
-  Rémi Bardenet</SPAN></A>, <A HREF="http://pierrechainais.ec-lille.fr/">Pierre Chainais</A>, <A HREF="https://jflamant.github.io/">Julien Flamant</A>. 
- <I> 13th International conference on sampling
-theory and applications, SampTA 2019, Aug 2019, Bordeaux, France</I> (2018)  [<A HREF="https://hal.archives-ouvertes.fr/hal-02091672">HAL</A>]
-	</P>
-
-
-  <li><P><STRONG><font color="mediumblue"> Processus ponctuels déterminantaux </font></STRONG> 
-    <BR>
-    with <A HREF="https://www.google.com/search?q=mylene+maida"><SPAN STYLE="text-decoration: none">
-  Mylène Maïda</SPAN></A>.
- <I>Gazette des Mathématiciens</I> (2018)  [<A HREF="http://smf4.emath.fr/Publications/Gazette/Nouveautes/smf_gazette_157_38-48.pdf">SMF</A>] <BR/>
-	An english version has also been published in the <I>Newsletter of the EMS</I> [<A HREF="https://www.ems-ph.org/journals/newsletter/pdf/2019-06-112.pdf">EMS</A>]
-
-	</P>
-  <li><P><STRONG><font color="mediumblue"> From random matrices to Monte Carlo integration via Gaussian quadrature </font></STRONG> 
-    <BR> 
-    with <A HREF="http://rbardenet.github.io/"><SPAN STYLE="text-decoration: none">Rémi Bardenet</SPAN></A>. 
- <I>IEEE Statistical Signal processing workshop, 2018, Freiburg, Germany</I> (2018)  [<A HREF="https://hal.archives-ouvertes.fr/hal-01882393">HAL</A>]</P>
-
- <li><P> A note gathering some thoughts on the most used probability result in applications that is still confusing to me: <A href="pdf/LLN.pdf">the law of large numbers</A>. 
-</P>
-
-</ul>
 
 
 <BR>
@@ -421,14 +405,16 @@ theory and applications, SampTA 2019, Aug 2019, Bordeaux, France</I> (2018)  [<A
     with <A HREF="https://www.google.com/search?q=mylene+maida">Mylène Maïda</A> at Université de Lille.
   </P> 
 </ul>
+
+
 <BR>
 <P><STRONG>Projects:</STRONG></P>
 
-I was member of the <a href="https://inria.fr/fr"> INRIA </a> team PARADYSE, and the <a href="https://erc.europa.eu/homepage">ERC</a> funded project <A Href="https://cordis.europa.eu/project/id/851866">BlackJack</A> 
+I was member of the <a href="https://inria.fr/fr"> INRIA </a> team PARADYSE, and the <a href=https://erc.europa.eu/homepage>ERC</a> funded project <A Href="https://cordis.europa.eu/project/id/851866">BlackJack</A> 
 led by <A href="https://rbardenet.github.io/">Rémi Bardenet</A>.  
 <BR/><BR/> 
 
-  </div>
+
 </section>
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="Teaching">
@@ -509,7 +495,6 @@ Internship students: Imen Kerkeni (2018, Ecole Centrale Lille), Elvis Jourdant (
 
 
      
-        </div>
       </section>
 
 
@@ -563,7 +548,7 @@ Internship students: Imen Kerkeni (2018, Ecole Centrale Lille), Elvis Jourdant (
 </P>
 <P>
 Since September 2015, I am Maître de conférences (~Associate professor) in the <A HREF="https://math.univ-lille1.fr">Laboratoire Paul Painlevé</A>, 
-the mathematic department of the <A href="https://www.univ-lille.fr/">University of Lille</A>. I obtained in 2020 my "Habilitation à diriger des recherches" (HDR),
+the mathematic department of the <A href=https://www.univ-lille.fr/>University of Lille</A>. I obtained in 2020 my "Habilitation à diriger des recherches" (HDR),
 which is the French diploma allowing to supervise your own PhD students and claim for full professorship; 
 the manuscript can be found <A HREF = "pdf/HDR.pdf">here</A>. 
 </P>
@@ -583,7 +568,7 @@ Magistère de mathématiques de Strasbourg</A>, including a Bachelor thesis with
 a Magistère thesis with <A HREF="http://www.lpthe.jussieu.fr/~zuber/">Jean-Bernard Zuber</A> on quantum integrable systems (internship at the <A HREF="http://www.lpthe.jussieu.fr/spip/">Laboratoire de Physique Théorique et Hautes Energies</A> de Jussieu),
 and a Master thesis with <A HREF="http://www.uclouvain.be/pierre.vanmoerbeke/"> Pierre van Moerbeke</A> on random matrices and tillings (Erasmus exchange program with the
 <A HREF="http://www.uclouvain.be/index.html">Université Catholique de Louvain</A>).</P>
-</div>
+	</font>
 </section>
 
 
@@ -677,12 +662,9 @@ The On-Line Encyclopedia of Integer Sequences</A> (when looking for a special se
 
 <P STYLE="margin-bottom: 0cm"> And of course, <A HREF="https://openai.com/index/chatgpt/"><SPAN STYLE="text-decoration: none">
   ChatGPT</SPAN></A>.</P>
-</div>
 </section>
 
 
-
-    </div>
 
  <!--  
 
@@ -725,18 +707,11 @@ The On-Line Encyclopedia of Integer Sequences</A> (when looking for a special se
     <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <!-- Custom scripts for this template -->
-    <script src="js/resume.js"></script>
+    <script src="js/resume.min.js"></script>
     <!-- Always open hyperrefs in a new window -->  
     <script>
       document.querySelectorAll('a[href]').forEach(link => {
-        const href = link.getAttribute('href');
-        if (!href) return;
-        // Keep same-page anchors working (mobile UX)
-        if (href.startsWith('#')) return;
-        // Avoid forcing new tabs for special protocols
-        if (href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('javascript:')) return;
         link.setAttribute('target', '_blank');
-        link.setAttribute('rel', 'noopener noreferrer');
       });
     </script>
 
