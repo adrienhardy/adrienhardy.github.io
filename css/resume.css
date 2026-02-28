@@ -1,13 +1,23 @@
+:root {
+  --qrt-blue-1: #285090;
+  --qrt-blue-2: #3068b0;
+  --qrt-blue-3: #48a0d8;
+  --qrt-blue-4: #78c0e8;
+  --qrt-navy: #0e0c26;
+}
+
 body {
   font-family: 'Open Sans', serif;
   padding-top: 54px;
-  color: #868e96;
+  color: #4f5b66;
+  line-height: 1.65;
+  background-color: #ffffff;
 }
 
 @media (min-width: 992px) {
   body {
     padding-top: 0;
-    padding-left: 17rem;
+    padding-left: 13.6rem;
   }
 }
 
@@ -24,19 +34,22 @@ h6 {
 }
 
 h1 {
-  font-size: 6rem;
-  line-height: 5.5rem;
+  font-size: 4.4rem;
+  line-height: 4.25rem;
+  letter-spacing: 0.02em;
 }
 
 h2 {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
+  letter-spacing: 0.015em;
 }
 
 .subheading {
   text-transform: uppercase;
   font-weight: 500;
   font-family: 'Saira Extra Condensed', serif;
-  font-size: 1.35rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
 }
 
 .list-social-icons a {
@@ -44,7 +57,7 @@ h2 {
 }
 
 .list-social-icons a:hover {
-  color: #1772CD;
+  color: var(--qrt-blue-2);
 }
 
 .list-social-icons a .fa-lg {
@@ -56,12 +69,13 @@ h2 {
 }
 
 .list-icons .list-inline-item i:hover {
-  color: #1772CD;
+  color: var(--qrt-blue-2);
 }
 
 #sideNav .navbar-nav .nav-item .nav-link {
   font-weight: 600;
   text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
 @media (min-width: 992px) {
@@ -72,7 +86,7 @@ h2 {
     left: 0;
     display: flex;
     flex-direction: column;
-    width: 17rem;
+    width: 13.6rem;
     height: 100vh;
   }
   #sideNav .navbar-brand {
@@ -83,7 +97,7 @@ h2 {
   #sideNav .navbar-brand .img-profile {
     max-width: 10rem;
     max-height: 10rem;
-    border: 0.5rem solid rgba(255, 255, 255, 0.2);
+    border: 0.4rem solid rgba(255, 255, 255, 0.25);
   }
   #sideNav .navbar-collapse {
     display: flex;
@@ -105,9 +119,55 @@ h2 {
 }
 
 section.resume-section {
-  border-bottom: 1px solid #dee2e6;
-  padding-top: 5rem !important;
-  padding-bottom: 5rem !important;
+  border-bottom: 1px solid #e8edf2;
+  padding-top: 4.25rem !important;
+  padding-bottom: 4.25rem !important;
+}
+
+section.resume-section .my-auto {
+  max-width: 860px;
+}
+
+p, li {
+  color: #4f5b66;
+}
+
+.item-title {
+  color: var(--qrt-blue-2);
+  font-weight: 700;
+}
+
+#Research .item-title,
+#Teaching .item-title {
+  color: var(--qrt-blue-1);
+}
+
+#Research ol li p,
+#Teaching ul li p {
+  margin-bottom: 0.85rem;
+}
+
+#Research ol li {
+  margin-bottom: 0.5rem;
+}
+
+#Research p {
+  margin-bottom: 0.75rem;
+}
+
+.selected-publications {
+  border-left: 3px solid var(--qrt-blue-3);
+  background: linear-gradient(90deg, rgba(72, 160, 216, 0.1), rgba(120, 192, 232, 0.08));
+  border-radius: 6px;
+  padding: 0.65rem 0.8rem;
+}
+
+#Teaching ul {
+  padding-left: 1.2rem;
+}
+
+#Teaching ul li {
+  margin-bottom: 0.35rem;
 }
 
 section.resume-section .resume-item .resume-date {
@@ -131,19 +191,55 @@ section.resume-section .resume-item .resume-date {
 }
 
 .bg-primary {
-  background-color: #1772CD !important;
+  background: linear-gradient(180deg, var(--qrt-blue-1) 0%, var(--qrt-blue-2) 100%) !important;
 }
 
 .text-primary {
-  color: #1772CD !important;
+  color: var(--qrt-blue-2) !important;
 }
 
 a {
-  color: #1772CD;
+  color: var(--qrt-blue-2);
+  transition: color 0.2s ease;
 }
 
-a:hover, a:focus, a:active {
-  color: #824027;
+a:visited {
+  color: var(--qrt-blue-2);
+}
+
+a:hover {
+  color: var(--qrt-blue-4);
+  text-decoration: none;
+}
+
+a:focus,
+a:active {
+  color: var(--qrt-blue-2);
+  text-decoration: none;
+}
+
+.image-container {
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.hero-figure {
+  width: min(300px, 100%);
+  height: auto;
+}
+
+.image-caption {
+  font-size: 0.8em;
+  color: #888;
+  margin-top: 30px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.image-container:hover .image-caption {
+  opacity: 1;
 }
 
 
@@ -155,27 +251,36 @@ a:hover, a:focus, a:active {
 
   /* Taille des titres et du corps */
   h1 {
-    font-size: 2.5rem;
-    line-height: 3rem;
+    font-size: 2.35rem;
+    line-height: 2.75rem;
   }
 
   h2 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
 
   .subheading {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   body {
     font-size: 0.95rem;
-    padding-top: 4.5rem;
+    padding-top: 5.25rem;
   }
 
   /* Sections plus compactes */
   section.resume-section {
-    padding-top: 2rem !important;
-    padding-bottom: 2rem !important;
+    padding-top: 2.25rem !important;
+    padding-bottom: 2.25rem !important;
+  }
+
+  #Research ol {
+    padding-left: 1.1rem;
+  }
+
+  #Research ol li p,
+  #Teaching ul li p {
+    margin-bottom: 0.95rem;
   }
 
   /* Navbar mobile */
@@ -184,12 +289,12 @@ a:hover, a:focus, a:active {
     top: 0;
     width: 100%;
     z-index: 1030;
-    background-color: #1772CD;
+    background: linear-gradient(180deg, var(--qrt-blue-1) 0%, var(--qrt-blue-2) 100%);
   }
 
   /* Bouton hamburger */
   .navbar-toggler {
-    background-color: #1772CD !important;
+    background-color: var(--qrt-blue-1) !important;
     border: 2px solid white !important;
     border-radius: 5px !important;
     padding: 0.5rem 1rem !important;
@@ -202,7 +307,7 @@ a:hover, a:focus, a:active {
 
   /* Menu déroulant */
   .navbar-collapse {
-    background-color: #1772CD !important;
+    background: linear-gradient(180deg, var(--qrt-blue-1) 0%, var(--qrt-blue-2) 100%) !important;
     padding-top: 1rem;
     padding-bottom: 1rem;
     text-align: center;
@@ -216,13 +321,19 @@ a:hover, a:focus, a:active {
   }
 
   .navbar-nav .nav-link:hover {
-    color: #ffcc00 !important;
+    color: var(--qrt-blue-4) !important;
   }
 
   /* Image de profil plus petite */
   #sideNav .navbar-brand .img-profile {
     max-width: 7rem;
     max-height: 7rem;
+  }
+
+  /* Hover does not exist on touch devices, keep caption readable */
+  .image-caption {
+    opacity: 1;
+    margin-top: 0.75rem;
   }
 
 }

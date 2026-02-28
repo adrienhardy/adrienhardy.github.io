@@ -6,19 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Adrien Hardy - personal website (math)</title>
     <meta name="description" content="personal website of Adrien Hardy, academic researcher in applied mathematics, quantitative researcher at Qube Research and Technologies (QRT). 
-    Publications, lecture notes, and other academic ressources. Mathematics, Analysis, Probability, Statistics, Machine learning, AI, Quantitative finance.">
+    Publications, lecture notes, and other academic resources. Mathematics, Analysis, Probability, Statistics, Machine learning, AI, Quantitative finance.">
     <meta name="author" content="Adrien Hardy">
     <meta name="robots" content="index, follow">
     <link rel="icon" type="image/png" href="img/favicon.png">
     <!-- Open Graph (réseaux sociaux) -->
     <meta property="og:title" content="Adrien Hardy – personal website">
-    <meta property="og:description" content="Publications, lecture notes, and other academic ressources. Mathematics, Analysis, Probability, Statistics, Machine learning, AI, Quantitative finance.">
+    <meta property="og:description" content="Publications, lecture notes, and other academic resources. Mathematics, Analysis, Probability, Statistics, Machine learning, AI, Quantitative finance.">
     <meta property="og:url" content="https://adrienhardy.net">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://adrienhardy.net/img/moi2.jpg">
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Adrien Hardy – personal website">
-    <meta name="twitter:description" content="Publications, lecture notes, and other academic ressources. Mathematics, Analysis, Probability, Statistics, Machine learning, AI, Quantitative finance.">
+    <meta name="twitter:description" content="Publications, lecture notes, and other academic resources. Mathematics, Analysis, Probability, Statistics, Machine learning, AI, Quantitative finance.">
+    <meta name="twitter:image" content="https://adrienhardy.net/img/moi2.jpg">
     <!-- Association explicite de ton site à ton profil LinkedIn -->
     <link rel="me" href="https://ch.linkedin.com/in/adrien-hardy-7166401ab">
     <!-- Bootstrap core CSS -->
@@ -42,7 +44,7 @@
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
         <span class="d-block d-lg-none">Adrien Hardy</span>
         <span class="d-none d-lg-block">
-          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/moi2.jpg" alt="">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/moi2.jpg" alt="Portrait of Adrien Hardy">
 
           <!-- <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/moi.png" alt=""> -->
         </span>
@@ -105,42 +107,25 @@ No confidential nor proprietary information is shared here. -->
 Here I share my research publications, some teaching resources, and a few thoughts on (applied) mathematics more broadly.
 <BR/><BR/>
 
-<STRONG><font color="mediumblue">About me:</font></STRONG> 
-I'm quantitative research director at <A href="https://www.qube-rt.com">Qube Research and Technologies</A>, an algorithmic trading investement fund, in Zürich. 
+<strong class="item-title">About me:</strong>
+I'm quantitative research director at <A href="https://www.qube-rt.com">Qube Research and Technologies</A>, an algorithmic trading investment fund, in Zürich. 
 I am on leave from my academic position (Maître de conférences, i.e., Associate professor) 
 from the department of Mathematics at <A href="https://www.univ-lille.fr/">Université de Lille</A>. 
 <BR/><BR/>
 
 My academic research interests lie principally in understanding large random interacting particle systems, including random matrix models, determinantal point processes, 
 or Gibbs measures such as the Coulomb gas. More recently, I became interested in using such models for applications (numerical integration, machine learning & AI, signal processing, 
-telecomunications, and quantitative finance). 
+telecommunications, and quantitative finance). 
 <BR/><BR/>
 
 
 <!-- Picture -->
- <center>
-  <style>
-    .image-container {
-      text-align: center;
-      position: relative;
-      display: inline-block;
-    }
-    .image-caption {
-      font-size: 0.8em;
-      color: #888;
-      margin-top: 30px;
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-    .image-container:hover .image-caption {
-      opacity: 1;
-    }
-  </style>
+ <div class="text-center">
   <div class="image-container">
-    <img src="Spherical.jpg" alt="Spherical GAF realization (picture)" style="width:300px;height:300px;">
+    <img class="hero-figure" src="Spherical.jpg" alt="Spherical GAF realization (picture)">
     <div class="image-caption">Zeros of a spherical Gaussian analytic function, taken from <a href="#ref-spherical" style="color: #888; text-decoration: none;">Bardenet-Hardy 2019</a>. </div>
   </div>
-</center>
+</div>
            </p>
 <!-- End picture -->
 
@@ -154,27 +139,37 @@ telecomunications, and quantitative finance).
   <div class="my-auto">
     <h2 class="mb-5">Academic research</h2>
 
-      <P> <STRONG>Peer-reviewed publications</STRONG>:</P>
+    <P><STRONG>Peer-reviewed publications</STRONG>:</P>
 
-        See also: <A HREF="http://scholar.google.ch/citations?user=Ov9uZjgAAAAJ&hl=en"><SPAN STYLE="text-decoration: none">Google Scholar</SPAN></A>  | 
-        <A HREF="http://www.ams.org.ezproxy.math.cnrs.fr/mathscinet/search/author.html?mrauthid=975825">MathSciNet</A>  | 
-        <A HREF="https://arxiv.org/search/?query=adrien+hardy&searchtype=all&source=header">ArXiv</A>.
+    See also:
+    <A HREF="https://scholar.google.ch/citations?user=Ov9uZjgAAAAJ&hl=en"><SPAN STYLE="text-decoration: none">Google Scholar</SPAN></A> |
+    <A HREF="http://www.ams.org.ezproxy.math.cnrs.fr/mathscinet/search/author.html?mrauthid=975825">MathSciNet</A> |
+    <A HREF="https://arxiv.org/search/?query=adrien+hardy&searchtype=all&source=header">ArXiv</A>.
 
-        <BR><BR>
+    <BR>
+    <P class="selected-publications">
+      <strong>Selected publications:</strong>
+      <a href="#pub-neurips-2025">NeurIPS 2025 (spotlight)</a> |
+      <a href="#pub-clt-2020">JFA 2020</a> |
+      <a href="#pub-dlr-2020">CPAM 2020</a> |
+      <a href="#pub-mc-dpp-2019">AoAP 2019</a> |
+      <a href="#pub-aop-2016">AoP 2016</a>
+    </P>
+    <BR>
 
 <OL reversed>
 
 
-	<LI><P><STRONG><font color="mediumblue">Non-asymptotic analysis of data augmentation for precision matrix estimation</font></STRONG> 
+	<LI id="pub-neurips-2025"><P><strong class="item-title">Non-asymptotic analysis of data augmentation for precision matrix estimation</strong> 
         <BR>
         with 
-        <a href="https://fr.linkedin.com/in/lucas-morisset-b407001b1">Lucas Morisset</a>, <A HREF="https://alain.perso.math.cnrs.fr/">Alain Durmus</A>. 
+        <a href="https://fr.linkedin.com/in/lucas-morisset-b407001b1">Lucas Morisset</a>, <A HREF="https://alain.perso.math.cnrs.fr/">Alain Durmus</A>.<BR>
         To appear in <I>NeurIPS</I> - spotlight (2025)
 		[<A HREF="https://arxiv.org/abs/2510.02119"><SPAN STYLE="text-decoration: none">arXiv</SPAN></A>]
 		</P>
 
 
-	<LI><P><STRONG><font color="mediumblue">From point processes to quantum optics and back</font></STRONG> 
+	<LI><P><strong class="item-title">From point processes to quantum optics and back</strong> 
         <BR>
         with 
         <A HREF="http://rbardenet.github.io/"><SPAN STYLE="text-decoration: none">Rémi Bardenet</SPAN></A>, 
@@ -184,7 +179,7 @@ telecomunications, and quantitative finance).
         <A HREF="https://pro.univ-lille.fr/adam-rancon"><SPAN STYLE="text-decoration: none">Adam Rançon</SPAN></A>, 
         <A HREF="https://roussel.science/"><SPAN STYLE="text-decoration: none">Benjamin Roussel</SPAN></A>, 
         <A HREF="http://lptms.u-psud.fr/gregory-schehr/"><SPAN STYLE="text-decoration: none">Grégory Schehr</SPAN></A>, 
-        <A HREF="https://scholar.google.com/citations?user=vib6owIAAAAJ&hl=fr"><SPAN STYLE="text-decoration: none">Christophe I. Westbrook</SPAN></A>, 
+        <A HREF="https://scholar.google.com/citations?user=vib6owIAAAAJ&hl=fr"><SPAN STYLE="text-decoration: none">Christophe I. Westbrook</SPAN></A>.<BR>
 
         <I>Preprint</I> (2022)
 		[<A HREF="https://arxiv.org/abs/2210.05522"><SPAN STYLE="text-decoration: none">arXiv</SPAN></A>]
@@ -192,20 +187,21 @@ telecomunications, and quantitative finance).
 
 		
 
-	<LI><P><STRONG><font color="mediumblue">CLT for circular beta-Ensembles at high temperature</font></STRONG> 
+	<LI id="pub-clt-2020"><P><strong class="item-title">CLT for circular beta-Ensembles at high temperature</strong> 
         <BR>
         with 
-        <A HREF="http://user.math.uzh.ch/gaultier/"><SPAN STYLE="text-decoration: none">Gaultier Lambert</SPAN></A>. <I>Journal of Functional Analysis</I> (2020)
+        <A HREF="http://user.math.uzh.ch/gaultier/"><SPAN STYLE="text-decoration: none">Gaultier Lambert</SPAN></A>.<BR>
+        <I>Journal of Functional Analysis</I> (2020)
 		[<A HREF="https://arxiv.org/abs/1909.01142"><SPAN STYLE="text-decoration: none">arXiv</SPAN></A>
     , <A HREF="https://www.sciencedirect.com/science/article/pii/S0022123620304122?dgcid=rss_sd_all#!"><SPAN STYLE="text-decoration: none">JFA</SPAN></A>]
 		</P>
 
 
 
-	<LI><P><STRONG><font color="mediumblue">Mutual information of wireless channels and block-Jacobi ergodic operators</font></STRONG> 
+	<LI><P><strong class="item-title">Mutual information of wireless channels and block-Jacobi ergodic operators</strong> 
         <BR>
         with <A HREF="http://www-syscom.univ-mlv.fr/~whachem/"><SPAN STYLE="text-decoration: none">Walid Hachem</SPAN></A>,  
-        <A HREF="https://shamai.net.technion.ac.il/"><SPAN STYLE="text-decoration: none">Shlomo Shamai</SPAN></A>.
+        <A HREF="https://shamai.net.technion.ac.il/"><SPAN STYLE="text-decoration: none">Shlomo Shamai</SPAN></A>.<BR>
 		<I>IEEE Transactions on Information Theory</I> (2019)
 		[<A HREF="https://arxiv.org/abs/1811.04734"><SPAN STYLE="text-decoration: none">arXiv</SPAN></A>, 
     <A HREF="https://ieeexplore.ieee.org/document/8756045"><SPAN STYLE="text-decoration: none">IEEE IT</SPAN></A>]
@@ -213,44 +209,44 @@ telecomunications, and quantitative finance).
 
 
 
-	<LI><P><STRONG><font color="mediumblue">DLR equations and rigidity for the Sine-beta process</font></STRONG> 
+	<LI id="pub-dlr-2020"><P><strong class="item-title">DLR equations and rigidity for the Sine-beta process</strong> 
         <BR>
         with 
         <A HREF="http://pro.univ-lille.fr/david-dereudre"><SPAN STYLE="text-decoration: none">David Dereudre</SPAN></A>, 
         <A HREF="https://tleble.perso.math.cnrs.fr/"><SPAN STYLE="text-decoration: none">Thomas Leblé</SPAN></A>,
-        <A HREF="https://www.google.com/search?q=mylene+maida"><SPAN STYLE="text-decoration: none">Mylène Maïda</SPAN></A>. 
+        <A HREF="https://www.google.com/search?q=mylene+maida"><SPAN STYLE="text-decoration: none">Mylène Maïda</SPAN></A>.<BR>
         <I>Communications on Pure and Applied Mathematics</I> (2020)
 		[<A HREF="https://arxiv.org/abs/1809.03989"><SPAN STYLE="text-decoration: none">arXiv</SPAN></A>
     , <A HREF="https://onlinelibrary.wiley.com/doi/10.1002/cpa.21963"><SPAN STYLE="text-decoration: none">CPAM</SPAN></A>]
 		</P>
 
 
-    	  <li><P><STRONG><font color="mediumblue"> A correspondence between zeros of time-frequency transforms and Gaussian analytic functions</font></STRONG> 
+    	  <li><P><strong class="item-title">A correspondence between zeros of time-frequency transforms and Gaussian analytic functions</strong> 
     <BR>
     with 
     <A HREF="http://rbardenet.github.io/"><SPAN STYLE="text-decoration: none">Rémi Bardenet</SPAN></A>, 
     <A HREF="http://pierrechainais.ec-lille.fr/">Pierre Chainais</A>, 
-    <A HREF="https://jflamant.github.io/">Julien Flamant</A>. 
- <I> 13th International conference on sampling
+    <A HREF="https://jflamant.github.io/">Julien Flamant</A>.<BR>
+ <I>13th International conference on sampling
 theory and applications, SampTA</I> (2019)  [<A HREF="https://hal.archives-ouvertes.fr/hal-02091672">HAL</A>,
  <a href="https://ieeexplore.ieee.org/document/9030925">SampTA</a>]
 	</P>
 
-		<LI><P id="ref-spherical"><STRONG><font color="mediumblue">Time-frequency transforms of white noises and Gaussian analytic functions</font></STRONG> 
+		<LI><P id="ref-spherical"><strong class="item-title">Time-frequency transforms of white noises and Gaussian analytic functions</strong> 
         <BR>
         with 
         <A HREF="http://rbardenet.github.io/">
-		Rémi Bardenet</A>.
+		Rémi Bardenet</A>.<BR>
 		 <I>Applied and Computational Harmonic Analysis</I> (2019)
 		[<A HREF="https://arxiv.org/abs/1807.11554"><SPAN STYLE="text-decoration: none">arXiv</SPAN></A>,
 		<A HREF="https://www.sciencedirect.com/science/article/abs/pii/S1063520318302021">ACHA</A>]
 		</P>
 
 
-	<LI><P><STRONG><font color="mediumblue">Energy of the Coulomb gas on the sphere at low temperature</font></STRONG> 
+	<LI><P><strong class="item-title">Energy of the Coulomb gas on the sphere at low temperature</strong> 
         <BR>
         with 
-        <A HREF="http://personales.unican.es/beltranc/index.html"> Carlos Beltrán</A>.
+        <A HREF="http://personales.unican.es/beltranc/index.html"> Carlos Beltrán</A>.<BR>
 		<I> Archive for Rational Mechanics and Analysis </I> (2018)  
 		[<A HREF="https://arxiv.org/abs/1803.11018">arXiv</A>,
 		 <A HREF="http://link.springer.com/article/10.1007/s00205-018-1316-3">ARMA</A>,
@@ -261,7 +257,7 @@ theory and applications, SampTA</I> (2019)  [<A HREF="https://hal.archives-ouver
 		</P>
 
 
-        <LI><P><STRONG><font color="mediumblue">Polynomial ensembles and recurrence coefficients</font></STRONG> 
+        <LI><P><strong class="item-title">Polynomial ensembles and recurrence coefficients</strong> 
         <BR>
 	<I> Constructive Approximation</I>   (2018)
 	 [<A HREF="https://arxiv.org/abs/1709.01287"><SPAN STYLE="text-decoration: none">arXiv</SPAN></A>,
@@ -270,50 +266,50 @@ theory and applications, SampTA</I> (2019)  [<A HREF="https://hal.archives-ouver
 
 
 
-        <LI><P><STRONG><font color="mediumblue">Concentration for Coulomb gases and Coulomb transport inequalities</font></STRONG>
+        <LI><P><strong class="item-title">Concentration for Coulomb gases and Coulomb transport inequalities</strong>
 	<BR> 
 	with
 	 <A HREF="http://djalil.chafai.net/"><SPAN STYLE="text-decoration: none">
 	Djalil Chafaï</SPAN></A>,  <A HREF="https://www.google.com/search?q=mylene+maida"><SPAN STYLE="text-decoration: none">
-	Mylène Maïda</SPAN></A>.
+	Mylène Maïda</SPAN></A>.<BR>
 	<I> Journal of Functional Analysis </I>  (2018)
 	 [<A HREF="https://arxiv.org/abs/1610.00980"><SPAN STYLE="text-decoration: none">arXiv</SPAN></A>,
 	 <A HREF="https://www.sciencedirect.com/science/article/pii/S0022123618302209">JFA</A>]
 		</P>
   
 
-      <li><P><STRONG><font color="mediumblue">Processus ponctuels déterminantaux / Determinantal Point Processes</font></STRONG> 
+      <li><P><strong class="item-title">Processus ponctuels déterminantaux / Determinantal Point Processes</strong> 
     <BR>
     with <A HREF="https://www.google.com/search?q=mylene+maida"><SPAN STYLE="text-decoration: none">
-  Mylène Maïda</SPAN></A>.
+  Mylène Maïda</SPAN></A>.<BR>
  <I>Gazette des Mathématiciens</I> and <I>Newsletter of the EMS</I>(2018)  
  [<A HREF="http://smf4.emath.fr/Publications/Gazette/Nouveautes/smf_gazette_157_38-48.pdf">SMF</A>, <A HREF="https://www.ems-ph.org/journals/newsletter/pdf/2019-06-112.pdf">EMS</A>]
 
 
   	</P>
-  <li><P><STRONG><font color="mediumblue"> From random matrices to Monte Carlo integration via Gaussian quadrature </font></STRONG> 
+  <li><P><strong class="item-title">From random matrices to Monte Carlo integration via Gaussian quadrature</strong> 
     <BR> 
-    with <A HREF="http://rbardenet.github.io/"><SPAN STYLE="text-decoration: none">Rémi Bardenet</SPAN></A>. 
+    with <A HREF="http://rbardenet.github.io/"><SPAN STYLE="text-decoration: none">Rémi Bardenet</SPAN></A>.<BR>
  <I>IEEE Statistical Signal processing workshop</I> (2018) [<A HREF="https://hal.archives-ouvertes.fr/hal-01882393">HAL</A>, <a href="https://ieeexplore.ieee.org/document/8450783">IEEE SSP</a>]</P>
 
 
   
-		<LI><P><STRONG><font color="mediumblue">Monte Carlo with determinantal point processes</font></STRONG> 
+		<LI id="pub-mc-dpp-2019"><P><strong class="item-title">Monte Carlo with determinantal point processes</strong> 
 	<BR> 
 	with
 	<A HREF="http://rbardenet.github.io/"><SPAN STYLE="text-decoration: none">
-	Rémi Bardenet</SPAN></A>. 
+	Rémi Bardenet</SPAN></A>.<BR>
 	
 	<I>Annals of Applied Probability </I> (2019)
 	[<A HREF="http://arxiv.org/abs/1605.00361"><SPAN STYLE="text-decoration: none">arXiv</SPAN></A>, <A HREF="https://projecteuclid.org/euclid.aoap/1582621227">AAP</A>]
 		</P>
 
 
-		<LI><P><STRONG><font color="mediumblue">A survey on the eigenvalues local behavior of large complex correlated Wishart matrices</font></STRONG> 
+		<LI><P><strong class="item-title">A survey on the eigenvalues local behavior of large complex correlated Wishart matrices</strong> 
 	<BR> 
 	with
 	<A HREF="https://www-syscom.univ-mlv.fr/~whachem/"><SPAN STYLE="text-decoration: none">
-	Walid Hachem</SPAN></A>, <A HREF="http://www-syscom.univ-mlv.fr/~najim/"><SPAN STYLE="text-decoration: none">Jamal Najim</SPAN></A>.
+	Walid Hachem</SPAN></A>, <A HREF="http://www-syscom.univ-mlv.fr/~najim/"><SPAN STYLE="text-decoration: none">Jamal Najim</SPAN></A>.<BR>
 	<I>ESAIM: Proceedings and surveys</I> (2015)
 	[<A HREF="http://arxiv.org/abs/1509.04910"><SPAN STYLE="text-decoration: none">arXiv</SPAN></A>,
 	 <A HREF="http://www.esaim-proc.org/articles/proc/abs/2015/04/proc145109/proc145109.html"><SPAN STYLE="text-decoration: none">ESAIM</SPAN></A>]
@@ -321,11 +317,11 @@ theory and applications, SampTA</I> (2019)  [<A HREF="https://hal.archives-ouver
 	
 
 
-		<LI><P><STRONG><font color="mediumblue">Large complex correlated Wishart matrices: The Pearcey kernel and expansion at the hard edge</font></STRONG> 	
+		<LI><P><strong class="item-title">Large complex correlated Wishart matrices: The Pearcey kernel and expansion at the hard edge</strong> 	
 	<BR> 
 	with
 	<A HREF="https://www-syscom.univ-mlv.fr/~whachem/"><SPAN STYLE="text-decoration: none">
-	Walid Hachem</SPAN></A>, <A HREF="http://www-syscom.univ-mlv.fr/~najim/"><SPAN STYLE="text-decoration: none">Jamal Najim</SPAN></A>. 
+	Walid Hachem</SPAN></A>, <A HREF="http://www-syscom.univ-mlv.fr/~najim/"><SPAN STYLE="text-decoration: none">Jamal Najim</SPAN></A>.<BR>
 	<I> Electronic Journal of Probability</I> (2016)
 		[<A HREF="http://arxiv.org/abs/1507.06013"><SPAN STYLE="text-decoration: none">arXiv</SPAN></A>,
 	 <A HREF="http://dx.doi.org/10.1214/15-EJP4441"><SPAN STYLE="text-decoration: none">EJP</SPAN></A>]
@@ -334,12 +330,12 @@ theory and applications, SampTA</I> (2019)  [<A HREF="https://hal.archives-ouver
 
 
 		
-	<LI><P><STRONG><font color="mediumblue">Large complex correlated Wishart matrices: Fluctuations and asymptotic independence at the edges</font></STRONG>
+	<LI id="pub-aop-2016"><P><strong class="item-title">Large complex correlated Wishart matrices: Fluctuations and asymptotic independence at the edges</strong>
 	<BR>
 	with
 	<A HREF="https://www-syscom.univ-mlv.fr/~whachem/"><SPAN STYLE="text-decoration: none">
     
-	Walid Hachem</SPAN></A>, <A HREF="http://www-syscom.univ-mlv.fr/~najim/"><SPAN STYLE="text-decoration: none">Jamal Najim</SPAN></A>. 
+	Walid Hachem</SPAN></A>, <A HREF="http://www-syscom.univ-mlv.fr/~najim/"><SPAN STYLE="text-decoration: none">Jamal Najim</SPAN></A>.<BR>
 	<I>Annals of Probability</I> (2016)
 	[<A HREF="http://arxiv.org/abs/1409.7548"><SPAN STYLE="text-decoration: none">arXiv</SPAN>,
 	 <A HREF="http://projecteuclid.org/euclid.aop/1463410043">AOP</A>]
@@ -347,7 +343,7 @@ theory and applications, SampTA</I> (2019)  [<A HREF="https://hal.archives-ouver
  
 
 	
-		<LI><P><STRONG><font color="mediumblue">Average characteristic polynomials of determinantal point processes</font></STRONG>
+		<LI><P><strong class="item-title">Average characteristic polynomials of determinantal point processes</strong>
 	 <BR>
 	 <I>Annales de l'Institut Henri Poincaré - Probabilités et Statistiques</I> (2015) 
 	 [<A HREF="http://arxiv.org/abs/1211.6564"><SPAN STYLE="text-decoration: none">arXiv</SPAN></A>,
@@ -357,10 +353,10 @@ theory and applications, SampTA</I> (2019)  [<A HREF="https://hal.archives-ouver
 
 
 
-		<LI><P><STRONG><font color="mediumblue">Large deviations for a non-centered Wishart matrix</font></STRONG>
+		<LI><P><strong class="item-title">Large deviations for a non-centered Wishart matrix</strong>
 	<BR> 
 	with <A HREF="http://wis.kuleuven.be/analyse/arno/"><SPAN STYLE="text-decoration: none">Arno
-	Kuijlaars</SPAN></A>. 	 	
+	Kuijlaars</SPAN></A>.<BR>	 	
 	<I>Random Matrices: Theory and Applications</I> (2013)
 		[<A HREF="http://arxiv.org/abs/1204.6261"><SPAN STYLE="text-decoration: none">arXiv</SPAN></A>, 
 	 <A HREF="http://www.worldscientific.com/doi/abs/10.1142/S2010326312500165"><SPAN STYLE="text-decoration: none">RMTA</SPAN></A>]
@@ -368,7 +364,7 @@ theory and applications, SampTA</I> (2019)  [<A HREF="https://hal.archives-ouver
 	 
 
 
-		<LI><P><STRONG><font color="mediumblue">A note on large deviations for 2D Coulomb gas with weakly confining potential</font></STRONG>
+		<LI><P><strong class="item-title">A note on large deviations for 2D Coulomb gas with weakly confining potential</strong>
 	 <BR>
 	 <I>Electronic Communications in Probability </I> (2012)
 	 	[<A HREF="http://arxiv.org/abs/1202.2809"><SPAN STYLE="text-decoration: none">arXiv</SPAN></A>, 
@@ -377,10 +373,10 @@ theory and applications, SampTA</I> (2019)  [<A HREF="https://hal.archives-ouver
 	  
 	  
 
-		<LI><P><STRONG><font color="mediumblue">Weakly admissible vector equilibrium problems</font></STRONG>
+		<LI><P><strong class="item-title">Weakly admissible vector equilibrium problems</strong>
 	<BR>
 	 with <A HREF="http://wis.kuleuven.be/analyse/arno/"><SPAN STYLE="text-decoration: none">Arno
-	Kuijlaars</SPAN></A>. 
+	Kuijlaars</SPAN></A>.<BR>
 	<I>Journal of Approximation Theory</I> (2012)
 		[<A HREF="http://arxiv.org/abs/1110.6800"><SPAN STYLE="text-decoration: none">arXiv</SPAN></A>,
 	 <A HREF="http://www.sciencedirect.com/science/article/pii/S0021904512000573"><SPAN STYLE="text-decoration: none">JAT</SPAN></A>]
@@ -411,7 +407,7 @@ theory and applications, SampTA</I> (2019)  [<A HREF="https://hal.archives-ouver
 <BR>
 <P><STRONG>Projects:</STRONG></P>
 
-I was member of the <a href="https://inria.fr/fr"> INRIA </a> team PARADYSE, and the <a href=https://erc.europa.eu/homepage>ERC</a> funded project <A Href="https://cordis.europa.eu/project/id/851866">BlackJack</A> 
+I was a member of the <a href="https://inria.fr/fr"> INRIA </a> team PARADYSE, and the <a href=https://erc.europa.eu/homepage>ERC</a> funded project <A Href="https://cordis.europa.eu/project/id/851866">BlackJack</A> 
 led by <A href="https://rbardenet.github.io/">Rémi Bardenet</A>.  
 <BR/><BR/> 
 
@@ -421,71 +417,95 @@ led by <A href="https://rbardenet.github.io/">Rémi Bardenet</A>.
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="Teaching">
         <div class="my-auto">
           <h2 class="mb-5">Teaching material</h2>
-   <P>
-   Some academic lectures I gave (mainly in french):
-   </P>
-   <br> 
+          <P>Some academic lectures I gave (possibly in French):</P>
+          <br>
 
-  <UL>
+          <UL>
+            <LI>
+              <P>
+                (2025-) <strong class="item-title">Machine learning for quantitative trading</strong><br>
+                <a href="https://www.uzh.ch/en.html">Univ. Zürich</a>, <a href="https://www.cpm.uzh.ch/en.html">Portfolio Management Program</a>
+              </P>
+            </LI>
 
-    <LI>
-      <P> (2025-) <font color="mediumblue"><STRONG>Machine learning for quantitative trading</STRONG></font>, 
-      <a href="https://www.cpm.uzh.ch/en.html"> Portfolio Management Program</a> (Univ. Zürich & ETH).
-      </P>
+            <LI>
+              <P>
+                (2019-2020) <strong class="item-title">Concentration de la mesure et applications</strong><br>
+                <a href="https://www.univ-lille.fr/">Univ. Lille</a>, M2 Recherche (Math), Cours + TD.
+              </P>
+            </LI>
 
-  	<LI>
-  <P> (2019-2020) <font color="mediumblue"><STRONG>Concentration de la mesure et applications</STRONG></font>, 
-  M2 Recherche (Math), Cours + TD.
-  </P>
+            <LI>
+              <P>
+                (2019-2020) <strong class="item-title">Chaînes de Markov et applications</strong><br>
+                <a href="https://www.univ-lille.fr/">Univ. Lille</a>, M2 Ingénierie Statistique et Numérique (Math),
+                <A HREF="Cours/PMA/M2MC_notesCours.pdf">Cours</A> +
+                <A HREF="Cours/TP_M2MC_new.html">TP Python</A>.
+              </P>
+            </LI>
 
-    	<LI>
-  <P> (2019-2020) <font color="mediumblue"><STRONG>Chaînes de Markov et applications</STRONG></font>, 
-    M2 Ingénierie Statistique et Numérique (Math), <STRONG><A HREF="Cours/PMA/M2MC_notesCours.pdf">Cours</A></STRONG> + <STRONG><A HREF="Cours/TP_M2MC_new.html">TP Python</A></STRONG>.
-  </P>
+            <LI>
+              <P>
+                (2019-2020) <strong class="item-title">Probabilités discrètes</strong><br>
+                <a href="https://www.univ-lille.fr/">Univ. Lille</a>, L2 (Math), TD.
+              </P>
+            </LI>
 
-    	<LI>
-  <P> (2019-2020) <font color="mediumblue"><STRONG>Probabilités discrètes</STRONG></font>, 
-    L2 (Math), TD.
-  </P>
+            <LI>
+              <P>
+                (2018-2020) <strong class="item-title">Probabilité, modèles et applications</strong><br>
+                <a href="https://www.univ-lille.fr/">Univ. Lille</a>, M1 Ingénierie mathématique (Math),
+                <A HREF="Cours/PMA/PMA_Cours.pdf">Cours</A> +
+                <A HREF="Cours/TP_M1_PMA_new.html">TD</A>.
+              </P>
+            </LI>
 
+            <LI>
+              <P>
+                (2016-2020) <strong class="item-title">Séries temporelles</strong><br>
+                <a href="https://www.univ-lille.fr/">Univ. Lille</a>, M1 Mathématiques pour la finance (Math),
+                <A HREF="Cours/ST/ST_Cours.pdf">Cours</A> +
+                <A HREF="Cours/TP_M1_ST_new.html">TP Python</A> +
+                <A HREF="Cours/TP_M1_ST_new_R.html">TP R</A> (older).
+              </P>
+            </LI>
 
-  <LI>
-  <P> (2018-2020) <font color="mediumblue"><STRONG>Probabilité, modèles et applications</STRONG></font>, 
-    M1 Ingénierie mathématique (Math), <STRONG><A HREF="Cours/PMA/PMA_Cours.pdf">Cours</A></STRONG> + <STRONG><A HREF="Cours/TP_M1_PMA_new.html">TD</A></STRONG>.
-  </P>
+            <LI>
+              <P>
+                (2016-2018) <strong class="item-title">Introduction to statistics</strong><br>
+                <a href="https://centralelille.fr/">Centrale Lille</a>, M1 Biomedical engineering, cours + TP R.
+              </P>
+            </LI>
 
-	<LI>
-	<P> (2016-2020) <font color="mediumblue"><STRONG>Séries temporelles</STRONG></font>, 
-    M1 Mathématiques pour la finance (Math), <STRONG><A HREF="Cours/ST/ST_Cours.pdf">Cours</A></STRONG> 
-    + <STRONG><A HREF="Cours/TP_M1_ST_new.html">TP Python</A></STRONG> 
-    + <STRONG><A HREF="Cours/TP_M1_ST_new_R.html">TP R</A></STRONG> (older).
-	</P>
+            <LI>
+              <P>
+                (2016-2018) <strong class="item-title">Introduction aux processus ponctuels déterminantaux</strong><br>
+                <a href="https://www.univ-lille.fr/">Univ. Lille</a>, M2 Recherche (Math), Cours + TD.
+              </P>
+            </LI>
 
-	<LI>
-	<P> (2016-2018) <font color="mediumblue"><STRONG>Introduction to statistics</STRONG></font>, 
-    M1 Biomedical engineering (<a href="https://centralelille.fr/">Centrale Lille</a>), cours + TP R.
-	</P>
-	
-	<LI>
-	<P> (2016-2018) <font color="mediumblue"><STRONG>Introduction aux processus ponctuels déterminantaux</STRONG></font>, M2 Recherche (Math), Cours + TD.
-	</P>
+            <LI>
+              <P>
+                (2015-2018) <strong class="item-title">Traitement informatique de la statistique des données</strong><br>
+                <a href="https://www.univ-lille.fr/">Univ. Lille</a>, M1 Ingénierie mathématique (Math), cours +
+                <A HREF="Cours/TP_M1_TISD_new.html">TP R & SAS</A>.
+              </P>
+            </LI>
 
-	<LI>
-	<P>
-    (2015-2018) <font color="mediumblue"><STRONG>Traitement informatique de la statistique des données</STRONG></font>, 
-    M1 Ingénierie mathématique (Math), cours + <STRONG><A HREF="Cours/TP_M1_TISD_new.html">TP R & SAS</A></STRONG>.
-	</P>
-	
-	<LI>
-	<P> 
-	(2015-2017) <font color="mediumblue"><STRONG>Mathématiques de base</STRONG></font>, L1 SVTE parcours aménagé (Biologie), cours + TD.
-	</P>
+            <LI>
+              <P>
+                (2015-2017) <strong class="item-title">Mathématiques de base</strong><br>
+                <a href="https://www.univ-lille.fr/">Univ. Lille</a>, L1 SVTE parcours aménagé (Biologie), cours + TD.
+              </P>
+            </LI>
 
-	<LI> 
-	<P> 
-	(2015-2016) <font color="mediumblue"><STRONG>Mathématiques (analyse, algèbre, probabilités)</STRONG></font>, <a href="https://imt-nord-europe.fr/">Telecom Lille</a>, TD. 
-	</P>
-</UL>
+            <LI>
+              <P>
+                (2015-2016) <strong class="item-title">Mathématiques (analyse, algèbre, probabilités)</strong><br>
+                <a href="https://imt-nord-europe.fr/">Telecom Lille</a>, TD.
+              </P>
+            </LI>
+          </UL>
 
 
 
@@ -545,12 +565,12 @@ Internship students: Imen Kerkeni (2018, Ecole Centrale Lille), Elvis Jourdant (
           <h2 class="mb-5">Curriculum</h2>
 
 <P> Since September 2020, I am on leave (en disponibilité) to work as a Quantitative Researcher at <A href="https://www.qube-rt.com">QRT</A> (Paris). I moved in October 2023 to the brand new <A href="https://www.qube-rt.com">QRT</A> office in Zürich, 
-  in quality of Quantitative Research Director. 
+  as Quantitative Research Director. 
 </P>
 <P>
 Since September 2015, I am Maître de conférences (~Associate professor) in the <A HREF="https://math.univ-lille1.fr">Laboratoire Paul Painlevé</A>, 
-the mathematic department of the <A href="https://www.univ-lille.fr/">University of Lille</A>. I obtained in 2020 my "Habilitation à diriger des recherches" (HDR),
-which is the French diploma allowing to supervise your own PhD students and claim for full professorship; 
+the mathematics department of the <A href="https://www.univ-lille.fr/">University of Lille</A>. I obtained in 2020 my "Habilitation à diriger des recherches" (HDR),
+which is the French diploma allowing one to supervise PhD students and apply for full professorship; 
 the manuscript can be found <A HREF = "pdf/HDR.pdf">here</A>. 
 </P>
 <P>
@@ -567,9 +587,8 @@ Ledoux</A>.
 <P> Before that, I studied in the <A HREF="https://www.unistra.fr/formations/diplome/fr-rne-0673021v-pr-mi235-201">
 Magistère de mathématiques de Strasbourg</A>, including a Bachelor thesis with <A HREF="http://www.iphc.cnrs.fr/POLONYI-Janos.html"> Janos Polonyi</A> on quantum physics' axioms,
 a Magistère thesis with <A HREF="http://www.lpthe.jussieu.fr/~zuber/">Jean-Bernard Zuber</A> on quantum integrable systems (internship at the <A HREF="http://www.lpthe.jussieu.fr/spip/">Laboratoire de Physique Théorique et Hautes Energies</A> de Jussieu),
-and a Master thesis with <A HREF="http://www.uclouvain.be/pierre.vanmoerbeke/"> Pierre van Moerbeke</A> on random matrices and tillings (Erasmus exchange program with the
+and a Master thesis with <A HREF="http://www.uclouvain.be/pierre.vanmoerbeke/"> Pierre van Moerbeke</A> on random matrices and tilings (Erasmus exchange program with the
 <A HREF="http://www.uclouvain.be/index.html">Université Catholique de Louvain</A>).</P>
-	</font>
 </section>
 
 
@@ -629,7 +648,7 @@ and a Master thesis with <A HREF="http://www.uclouvain.be/pierre.vanmoerbeke/"> 
     (economy & finance Youtube channel by Gilles Mitteau)</P>
 
   <P STYLE="margin-bottom: 0cm"><A HREF="https://mattlevine.co/work"><SPAN STYLE="text-decoration: none">Money stuff</SPAN></A> 
-    (Matt Levine's newsletter at Bloomberg opinion)
+    (Matt Levine's newsletter at Bloomberg Opinion)
   </P>
 
   <br>
@@ -641,14 +660,15 @@ and a Master thesis with <A HREF="http://www.uclouvain.be/pierre.vanmoerbeke/"> 
   Wikipedia</A></P>
 
 <P STYLE="margin-bottom: 0cm"><A HREF="https://arxiv.org/"><SPAN STYLE="text-decoration: none"> 
-  ArXiv </SPAN></A> (open-access repository of e-prints mainly funded by the <A HREF="https://news.cornell.edu/stories/2023/10/research-repository-arxiv-receives-10m-upgrades"><SPAN STYLE="text-decoration: none">Simons Foundation</SPAN></A>)</P>
-  
+  ArXiv </SPAN></A> (open-access repository of e-prints mainly funded by the 
+  <A HREF="https://news.cornell.edu/stories/2023/10/research-repository-arxiv-receives-10m-upgrades"><SPAN STYLE="text-decoration: none">Simons Foundation</SPAN></A>)</P>
+
   
 <P STYLE="margin-bottom: 0cm"><A HREF="http://mathoverflow.net/"><SPAN STYLE="text-decoration: none">
-  Math Overflow </SPAN></A> (research level math questions)</P>
+  Math Overflow </SPAN></A> (research-level math questions)</P>
 
   <P STYLE="margin-bottom: 0cm"><A HREF="https://math.stackexchange.com/"><SPAN STYLE="text-decoration: none">
-    Math Stackexchange</SPAN></A> (student level math questions)</P>
+    Math Stack Exchange</SPAN></A> (student-level math questions)</P>
   
   <P STYLE="margin-bottom: 0cm"><A HREF="http://stackoverflow.net/"><SPAN STYLE="text-decoration: none">
     Stack Overflow </SPAN></A> (programming questions)</P>
@@ -661,8 +681,16 @@ The On-Line Encyclopedia of Integer Sequences</A> (when looking for a special se
 
 <br>
 
-<P STYLE="margin-bottom: 0cm"> And of course, <A HREF="https://openai.com/index/chatgpt/"><SPAN STYLE="text-decoration: none">
-  ChatGPT</SPAN></A>.</P>
+<P STYLE="margin-bottom: 0cm"> And of course, 
+  <A HREF="https://openai.com/index/chatgpt/"><SPAN STYLE="text-decoration: none">ChatGPT</SPAN></A>,
+  <A HREF="https://claude.com/product/overview"><SPAN STYLE="text-decoration: none">Claude</SPAN></A>, 
+   their cousins...
+</P>
+
+<P STYLE="margin-bottom: 0cm">
+   together with <A HREF="https://cursor.com/home?from=agents"><SPAN STYLE="text-decoration: none">Cursor</SPAN></A>, 
+   which probably made this website slightly less amateurish, among many other things. 
+</P>
 </section>
 
 
@@ -709,10 +737,22 @@ The On-Line Encyclopedia of Integer Sequences</A> (when looking for a special se
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <!-- Custom scripts for this template -->
     <script src="js/resume.min.js"></script>
-    <!-- Always open hyperrefs in a new window -->  
+    <!-- Always open external links in a new window -->
     <script>
-      document.querySelectorAll('a[href]').forEach(link => {
-        link.setAttribute('target', '_blank');
+      document.querySelectorAll('a[href]').forEach((link) => {
+        const href = link.getAttribute('href');
+        if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) {
+          return;
+        }
+        try {
+          const url = new URL(href, window.location.href);
+          if (url.origin !== window.location.origin) {
+            link.setAttribute('target', '_blank');
+            link.setAttribute('rel', 'noopener noreferrer');
+          }
+        } catch (error) {
+          // Ignore malformed URLs.
+        }
       });
     </script>
 
